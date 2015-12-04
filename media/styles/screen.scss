@@ -1,0 +1,252 @@
+@import "reset";
+@import "font-awesome.css";
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*
+-----------------------------------------------
+Chad Spencer Styles
+----------------------------------------------- */
+$lora: 'Lora', Helvetica, Arial, Verdana, sans-serif;
+$mont: 'Montserrat', Helvetica, Arial, Verdana, sans-serif;
+$grey: #4D5A5A;
+$light-grey: #BDBDBD;
+
+/* Global
+----------------------------------------------- */
+body {
+  color: $grey;
+  font-family: $lora;
+  font-style: normal;
+  font-weight: 400;
+  padding: 10% 5% 5% 5%;
+  @media all and (max-width: 1024px) {
+    -webkit-text-size-adjust: none;
+  }
+}
+a {
+	&:hover {
+	  text-decoration: underline;
+  }
+}
+
+/* Content
+----------------------------------------------- */
+h1 {
+  color: $light-grey;
+  font: 700 8vw/1em $mont;
+  text-align: center;
+  text-transform: uppercase;
+  @media all and (max-width: 1023px) {
+      font-size: 10vw;
+    }
+  b {
+    color: $grey;
+    display: block;
+    font-size: 15vw;
+    font-weight: 700;
+    line-height: 1em;
+    @media all and (max-width: 1023px) {
+      font-size: 18vw;
+    }
+  }
+}
+h2 {
+  color: $light-grey;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 40px;
+  margin: 50px 0;
+  position: relative;
+  text-align: center;
+  @media all and (max-width: 767px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 25px 0;
+  }
+  &:after {
+    background: $light-grey;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 50px auto 0 auto;
+    width: 250px;
+    @media all and (max-width: 767px) {
+      margin-top: 25px;
+    }
+  }
+}
+article {
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: center;
+  p {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 40px 0;
+    @media all and (max-width: 767px) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  } 
+}
+ul {
+  &:first-of-type {
+    font-size: 0;
+    margin: 80px -3% 100px -3%;
+    text-align: center;
+    @media all and (max-width: 1023px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    li {
+      border-radius: 50%;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+      width: 32%;
+      @media all and (max-width: 1023px) {
+        vertical-align: top;
+        width: 48%;
+        margin-top: 50%;
+      }
+      @media all and (max-width: 767px) {
+        display: block;
+        margin: -4% auto 0 auto;
+        width: 85%;
+      }
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+      &.nights {
+        background: rgba(235, 225, 55, 0.75);
+        @media all and (max-width: 767px) {
+          z-index: 10;
+        }
+        div {
+          h3 {
+            &:before {
+              content: '\f186';
+            }
+          }
+        }
+      }
+      &.days {
+        background: rgba(237, 82, 41, 0.75);
+        margin: 0 -3%;
+        width: 40%;
+        z-index: 10;
+        @media all and (max-width: 1023px) {
+          margin: 0 -29%;
+          width: 60%;
+        }
+        @media all and (max-width: 767px) {
+          margin: 0;
+          width: 100%;
+          z-index: 20;
+        }
+        div {
+          padding: 12%;
+          h3 {
+            &:before {
+              content: '\f185';
+            }
+          }
+        }
+      }
+      &.weekends {
+        background: rgba(53, 210, 215, 0.75);
+        div {
+          h3 {
+            &:before {
+              content: '\f1e3';
+            }
+          }
+        }
+      }
+      div {
+        box-sizing: border-box;
+        left: 0;
+        padding: 10%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        h3 {
+          color: #fff;
+          font-family: $mont;
+          font-size: 40px;
+          line-height: 45px;
+          margin: 0 0 20px 0;
+          @media all and (max-width: 767px) {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 10px;
+          }
+          &:before {
+            color: $grey;
+            display: inline-block;
+            font-family: 'FontAwesome';
+            font-weight: normal;
+            margin: 0 10px 0 0;
+          }
+        }
+        p {
+          font-size: 18px;
+          line-height: 25px;
+          @media all and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      a {
+        color: $light-grey;
+        font-size: 0;
+        line-height: 60px;
+        &:before {
+          display: inline-block;
+          font-family: 'FontAwesome';
+          font-size: 50px;
+          font-weight: normal;
+          margin: 0 10px 0 0;
+        }
+        &:hover {
+          color: $grey;
+        }
+        &.email {
+          &:before {
+            content: '\f0e0';
+          }
+        }
+        &.github {
+          &:before {
+            content: '\f09b';
+          }
+        }
+        &.linkedin {
+          &:before {
+            content: '\f0e1';
+          }
+        }
+        &.twitter {
+          &:before {
+            content: '\f099';
+          }
+        }
+      }
+    }
+  }
+}
