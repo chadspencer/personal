@@ -56,6 +56,13 @@ h1 {
     font-size: 35px;
     line-height: 35px;
   }
+  a {
+    color: $light-grey;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   b {
     color: $grey;
     display: block;
@@ -99,6 +106,9 @@ h2 {
     @media all and (max-width: 767px) {
       margin-top: 25px;
     }
+  }
+  a {
+    color: $light-grey;
   }
 }
 h3 {
@@ -251,8 +261,12 @@ ul {
             line-height: 22px;
           }
           @media all and (max-width: 767px) {
-            font-size: 12px;
-            line-height: 16px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          @media all and (max-width: 359px) {
+            font-size: 13px;
+            line-height: 18px;
           }
         }
       }
