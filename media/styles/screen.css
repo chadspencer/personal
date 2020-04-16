@@ -93,7 +93,6 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -153,8 +152,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -180,14 +177,10 @@ th {
   padding: 0; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 input,
@@ -229,7 +222,7 @@ Chad Spencer Styles
 /* Global
 ----------------------------------------------- */
 body {
-  color: #4d5a5a;
+  color: #4D5A5A;
   font-family: "Ubuntu", Helvetica, Arial, Verdana, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -244,7 +237,7 @@ body {
       -webkit-text-size-adjust: none; } }
 
 a {
-  color: #4d5a5a;
+  color: #4D5A5A;
   text-decoration: underline; }
   a:hover {
     text-decoration: underline; }
@@ -252,7 +245,7 @@ a {
 /* Content
 ----------------------------------------------- */
 h1 {
-  color: #bdbdbd;
+  color: #BDBDBD;
   font: 700 115px/115px "Montserrat", Helvetica, Arial, Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase; }
@@ -269,12 +262,15 @@ h1 {
       font-size: 35px;
       line-height: 35px; } }
   h1 a {
-    color: #bdbdbd;
-    text-decoration: none; }
+    color: #BDBDBD;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 10; }
     h1 a:hover {
       text-decoration: none; }
   h1 b {
-    color: #4d5a5a;
+    color: #4D5A5A;
     display: block;
     font-size: 220px;
     font-weight: 700;
@@ -293,7 +289,7 @@ h1 {
         line-height: 60px; } }
 
 h2 {
-  color: #bdbdbd;
+  color: #BDBDBD;
   font-size: 30px;
   font-weight: normal;
   line-height: 40px;
@@ -306,7 +302,7 @@ h2 {
       line-height: 30px;
       margin: 25px 0; } }
   h2:after {
-    border-top: 2px dotted #bdbdbd;
+    border-top: 2px dotted #BDBDBD;
     content: '';
     display: block;
     height: 0;
@@ -316,7 +312,7 @@ h2 {
       h2:after {
         margin-top: 25px; } }
   h2 a {
-    color: #bdbdbd; }
+    color: #BDBDBD; }
 
 h3 {
   font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
@@ -408,7 +404,8 @@ ul.circles {
       position: absolute;
       text-align: center;
       top: 45%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       width: 100%; }
       @media all and (max-width: 1199px) {
         ul.circles li div {
@@ -429,7 +426,7 @@ ul.circles {
             font-size: 25px;
             line-height: 30px; } }
         ul.circles li div h3:before {
-          color: #4d5a5a;
+          color: #4D5A5A;
           display: block;
           font-family: 'FontAwesome';
           font-weight: normal;
@@ -453,6 +450,7 @@ ul.circles {
           ul.circles li div p {
             font-size: 13px;
             line-height: 18px; } }
+
 ul.work {
   font-size: 0;
   margin: 60px auto 100px auto;
@@ -495,10 +493,11 @@ ul.work {
       text-align: center;
       text-decoration: none;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       width: 100%; }
       ul.work li a:hover h3 {
-        color: #4d5a5a; }
+        color: #4D5A5A; }
       ul.work li a h3 {
         color: #fff;
         font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
@@ -511,11 +510,12 @@ ul.work {
             line-height: 30px;
             margin-bottom: 10px; } }
         ul.work li a h3:before {
-          color: #4d5a5a;
+          color: #4D5A5A;
           display: block;
           font-family: 'FontAwesome';
           font-weight: normal;
           margin: 0 10px 0 0; }
+
 ul.social {
   text-align: center; }
   ul.social li {
@@ -525,9 +525,10 @@ ul.social {
       ul.social li {
         margin: 0 10px; } }
     ul.social li a {
-      color: #bdbdbd;
+      color: #BDBDBD;
       font-size: 0;
-      line-height: 60px; }
+      line-height: 60px;
+      text-decoration: none; }
       ul.social li a:before {
         display: inline-block;
         font-family: 'FontAwesome';
@@ -538,7 +539,8 @@ ul.social {
           ul.social li a:before {
             font-size: 35px; } }
       ul.social li a:hover {
-        color: #4d5a5a; }
+        color: #4D5A5A;
+        text-decoration: none; }
       ul.social li a.email:before {
         content: '\f0e0'; }
       ul.social li a.github:before {

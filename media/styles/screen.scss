@@ -58,7 +58,10 @@ h1 {
   }
   a {
     color: $light-grey;
+    display: block;
+    position: relative;
     text-decoration: none;
+    z-index: 10;
     &:hover {
       text-decoration: none;
     }
@@ -359,6 +362,7 @@ ul {
         color: $light-grey;
         font-size: 0;
         line-height: 60px;
+        text-decoration: none;
         &:before {
           display: inline-block;
           font-family: 'FontAwesome';
@@ -371,6 +375,7 @@ ul {
         }
         &:hover {
           color: $grey;
+          text-decoration: none;
         }
         &.email {
           &:before {
